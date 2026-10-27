@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/skill.schema.json",
+  "id": "page-compose",
+  "name": { "zh": "就地创作", "en": "Compose In Place" },
+  "description": {
+    "zh": "按一句创作要求，在页面正文的指定位置生成一段新内容，衔接上文、不重复下文",
+    "en": "Generate one new passage at a position in the page from a one-line brief, following the preceding text without repeating what comes next"
+  },
+  "icon": "✍️",
+  "version": "1.0.0",
+  "author": "Wrisp Team",
+  "category": ["generation", "continue"],
+  "tags": [
+    { "zh": "创作", "en": "compose" },
+    { "zh": "生成", "en": "generate" },
+    { "zh": "正文", "en": "prose" }
+  ],
+  "enabled": true,
+  "systemPrompt": {
+    "zh": "你是中文写作助手。只输出要写入正文的段落本身，不解释、不加标题、不加引号。",
+    "en": "You are a writing assistant. Output only the passage to be inserted — no explanation, no heading, no quotes."
+  },
+  "promptTemplate": {
+    "zh": "页面标题：{{pageTitle}}\n\n本页标题结构：\n{{outline}}\n\n【上文】\n{{precedingText}}\n\n【本次创作要求】\n{{brief}}\n\n【下文（已在正文中）】\n{{followingText}}\n\n要求：\n1. 只写一段新内容，插入位置在「上文」与「下文」之间\n2. 与上文在话题、人称、时态上连贯\n3. 不重复、不改写「下文」已有的信息\n4. 只输出正文文本",
+    "en": "Page title: {{pageTitle}}\n\nOutline:\n{{outline}}\n\n[BEFORE]\n{{precedingText}}\n\n[BRIEF]\n{{brief}}\n\n[AFTER — already in the document]\n{{followingText}}\n\nRules:\n1. Write one new passage that belongs between BEFORE and AFTER\n2. Stay consistent with BEFORE in topic, person and tense\n3. Do not repeat or rewrite what AFTER already says\n4. Output only the passage text"
+  },
+  "input": {
+    "type": "object",
+    "properties": {
+      "brief": { "type": "string", "description": { "zh": "一句话创作要求", "en": "One-line creation brief" } },
+      "pageTitle": { "type": "string", "description": { "zh": "页面标题", "en": "Page title" } },
+      "outline": { "type": "string", "description": { "zh": "本页标题层级", "en": "Page heading outline" } },
+      "precedingText": { "type": "string", "description": { "zh": "插入位置之前的正文", "en": "Text before the insertion point" } },
+      "followingText": { "type": "string", "description": { "zh": "插入位置之后的正文", "en": "Text after the insertion point" } }
+    },
+    "required": ["brief"]
+  },
+  "output": { "type": "text" },
+  "preProcess": [{ "type": "trim" }],
+  "example": {
+    "zh": {
+      "input": { "brief": "补一段解释为什么要把需求拆成两期", "pageTitle": "排期", "outline": "", "precedingText": "一期只做记录与整理。", "followingText": "" },
+      "output": "把需求拆成两期，是为了让一期能独立交付。"
+    },
+    "en": {
+      "input": { "brief": "Add a passage explaining why the requirements are split into two phases", "pageTitle": "Scheduling", "outline": "", "precedingText": "Phase one covers recording and organizing only.", "followingText": "" },
+      "output": "Splitting the requirements into two phases lets phase one ship on its own."
+    }
+  }
+}

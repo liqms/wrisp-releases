@@ -1,0 +1,336 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/skill.schema.json",
+  "title": "Skill",
+  "description": "Wrisp Skill 定义规范",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "icon",
+    "version",
+    "category",
+    "promptTemplate"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*$",
+      "minLength": 1,
+      "maxLength": 64,
+      "description": "Skill 唯一标识符，只能包含小写字母、数字、下划线和连字符"
+    },
+    "name": {
+      "$ref": "#/definitions/LocalizedText",
+      "description": "Skill 显示名称（双语）"
+    },
+    "description": {
+      "$ref": "#/definitions/LocalizedText",
+      "description": "Skill 功能描述（双语）"
+    },
+    "icon": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "description": "Skill 图标（emoji）"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "语义化版本号，格式为 x.y.z"
+    },
+    "author": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "category": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "minItems": 1,
+      "maxItems": 4,
+      "description": "分类路径，支持多级分类，如 [\"editing\", \"polish\"]"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LocalizedText"
+      },
+      "maxItems": 16,
+      "description": "类型标签（双语）"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "promptTemplate": {
+      "$ref": "#/definitions/LocalizedText",
+      "description": "Prompt 模板（双语，执行时按当前语言选择），使用 {{变量名}} 进行参数插值"
+    },
+    "systemPrompt": {
+      "$ref": "#/definitions/LocalizedText",
+      "description": "系统提示词（双语）"
+    },
+    "input": {
+      "type": "object",
+      "required": ["type", "properties"],
+      "properties": {
+        "type": { "const": "object" },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/SkillInputProperty"
+          }
+        },
+        "required": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "description": "输入参数定义（JSON Schema 格式）"
+    },
+    "output": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["text", "json", "markdown"]
+        },
+        "schema": {
+          "type": "object"
+        }
+      },
+      "description": "输出类型定义"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SkillToolDefinition"
+      },
+      "maxItems": 16,
+      "description": "工具定义（L2 能力）"
+    },
+    "maxSteps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "description": "最大工具调用轮数（L2）"
+    },
+    "temperature": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 2,
+      "description": "模型温度"
+    },
+    "preProcess": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SkillPreProcess"
+      },
+      "maxItems": 8,
+      "description": "预处理规则"
+    },
+    "workflow": {
+      "type": "object",
+      "required": ["nodeType", "inputs", "outputs"],
+      "properties": {
+        "nodeType": { "type": "string", "minLength": 1 },
+        "inputs": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "outputs": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "description": "Workflow 集成配置"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SkillParameter"
+      },
+      "maxItems": 16
+    },
+    "inputMapping": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "输入参数与上下文的映射关系，如 { \"text\": \"selectedText\" }"
+    },
+    "postProcess": {
+      "$ref": "#/definitions/SkillPostProcess"
+    },
+    "example": {
+      "$ref": "#/definitions/SkillExample"
+    }
+  },
+  "definitions": {
+    "LocalizedText": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false,
+      "description": "双语文本：zh 为简体中文，en 为英文"
+    },
+    "SkillInputProperty": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean", "array", "object"]
+        },
+        "description": {
+          "$ref": "#/definitions/LocalizedText"
+        },
+        "enum": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "default": {}
+      }
+    },
+    "SkillToolDefinition": {
+      "type": "object",
+      "required": ["type", "function"],
+      "properties": {
+        "type": { "const": "function" },
+        "function": {
+          "type": "object",
+          "required": ["name", "description", "parameters"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "description": { "type": "string", "minLength": 1 },
+            "parameters": {
+              "type": "object",
+              "required": ["type", "properties"],
+              "properties": {
+                "type": { "const": "object" },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": { "type": "object" }
+                },
+                "required": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SkillPreProcess": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["trim", "stripHtml", "extractSelection"]
+        },
+        "options": {
+          "type": "object"
+        }
+      }
+    },
+    "SkillParameter": {
+      "type": "object",
+      "required": ["name", "type", "default", "label", "description", "ui"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean"]
+        },
+        "enum": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "default": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "boolean" }
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "ui": {
+          "type": "string",
+          "enum": ["dropdown", "input", "textarea", "toggle", "slider"]
+        }
+      }
+    },
+    "SkillPostProcess": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["trim", "stripHtml", "formatJson", "wrapMarkdown"]
+        },
+        "options": {
+          "type": "object"
+        }
+      }
+    },
+    "SkillExample": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "$ref": "#/definitions/SkillExampleData" },
+        "en": { "$ref": "#/definitions/SkillExampleData" }
+      },
+      "additionalProperties": false,
+      "description": "使用示例（双语）"
+    },
+    "SkillExampleData": {
+      "type": "object",
+      "required": ["input", "output"],
+      "properties": {
+        "input": {
+          "type": "object"
+        },
+        "output": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
