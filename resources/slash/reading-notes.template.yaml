@@ -1,0 +1,31 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: reading-notes
+version: 1.0.0
+title:
+  zh: 读书笔记
+  en: Reading Notes
+description:
+  zh: 插入读书笔记框架
+  en: Insert reading notes skeleton
+icon: menu_book
+markdown:
+  zh: |
+    ## 读书笔记 - {书名}
+    - 作者：
+    - 核心内容：
+    - 金句摘录：
+    - 我的思考：
+  en: |
+    ## Reading Notes - {book}
+    - Author:
+    - Core content:
+    - Quotes:
+    - My thoughts:
+profession:
+  - student
+tags:
+  - zh: 学习
+    en: study
+  - zh: 阅读
+    en: reading
+enabled: true

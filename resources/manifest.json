@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-10-26T04:10:45.717Z",
+  "updatedAt": "2026-11-03T07:23:12.970Z",
   "files": [
     {
       "type": "model-meta",
@@ -10,213 +10,189 @@
     },
     {
       "type": "page",
-      "path": "page/page-prd.json",
+      "path": "page/page-prd.template.yaml",
       "version": "1.0.0",
-      "sha256": "037b2591db81137cebcb52194bd29e61a4ae6b2a260175a6b5be8aec8f998980"
+      "sha256": "dcb6fe3a8f13606b64584434c5dfde2bda11aead03c3ad0283ace476b5ba0f8b"
     },
     {
       "type": "page",
-      "path": "page/page-project-plan.json",
+      "path": "page/page-project-plan.template.yaml",
       "version": "1.0.0",
-      "sha256": "2384e1373f2cbed0705d8622fc3030f26c81b62d339fb196fdcedeaac4c14a61"
+      "sha256": "a8d9edca90f07c6e6cfa5a8fe48b61398ccda75ad4ebe5f4df8397f28258adce"
     },
     {
       "type": "page",
-      "path": "page/page-reading-notes.json",
+      "path": "page/page-reading-notes.template.yaml",
       "version": "1.0.0",
-      "sha256": "3bbf62efa1c485daa91331f0960941386bfcfbdb78ce23e06ec378f82cd7ea0f"
+      "sha256": "1dbc86f7ad11006dd84541214b1715d77a6bf2ef9c17ecb25d91766a31136248"
     },
     {
       "type": "page",
-      "path": "page/page-tech-design.json",
+      "path": "page/page-tech-design.template.yaml",
       "version": "1.0.0",
-      "sha256": "087f877ba3ba6ed58e272d664e37bb600ea635df1f5c0e2a4ea7dfc5ea6230c8"
+      "sha256": "0bd7b0d41989eff7554f460541a67ca5e6b0fb9d5db1a8df2191e1654aaeadad"
     },
     {
       "type": "page",
-      "path": "page/page-weekly-report.json",
+      "path": "page/page-weekly-report.template.yaml",
       "version": "1.0.0",
-      "sha256": "3d047a617a06ce686bd25f6d84f7aad9409a98dbca604cc5c4160b4eb83d94ee"
+      "sha256": "50e9377ddbfef9e1baeade522d3e41eef8e13a2d36df2441a7c9248bb39cc2f1"
     },
     {
       "type": "skill",
-      "path": "skills/continue.skill.json",
+      "path": "skills/expand.skill.yaml",
       "version": "1.0.0",
-      "sha256": "e5662abcc6b556a105576c995bea3fcf842f93aed639025bc871c492a182a70c"
+      "sha256": "2c886b6d34adb4324c2e466ab3299a3906d9a403a3243db5f29b58e007ca6022"
     },
     {
       "type": "skill",
-      "path": "skills/expand.skill.json",
+      "path": "skills/grammar.skill.yaml",
       "version": "1.0.0",
-      "sha256": "f3696da7887a939ddc2cea4c99ef5753c399c4076d2eb5188f236989129bcd8b"
+      "sha256": "8f2b989d1de8a70f65d6ce3923249b026897abfbdf70c9ecd7c4df22fbc0552e"
     },
     {
       "type": "skill",
-      "path": "skills/grammar.skill.json",
+      "path": "skills/keywords.skill.yaml",
       "version": "1.0.0",
-      "sha256": "b74e18fa35d65166597493a15f1bdfd341261ae6df54462c88541b4b97a3ae56"
+      "sha256": "6e8a9496db41d6bd1424055f9ce550ab7499fc6fe7865d556d458b65c4ba8f24"
     },
     {
       "type": "skill",
-      "path": "skills/keywords.skill.json",
+      "path": "skills/rewrite.skill.yaml",
       "version": "1.0.0",
-      "sha256": "320c51d3d77ba9cccb0801fb6062373b365c0973fd655b7c1c0e4e27f00a0d56"
+      "sha256": "ba737b428faa56b62b72cb3b39386acb8a3e1fda16a35cb29f448e47a1c20d7e"
     },
     {
       "type": "skill",
-      "path": "skills/outline.skill.json",
+      "path": "skills/sentiment.skill.yaml",
       "version": "1.0.0",
-      "sha256": "249ef032d98e51f0f3847a8d114a8ad3170e7661da5f8077666bf9145b07eb3b"
+      "sha256": "91029cd6101e775c2c9cdf7f3a55260cdcc86604ebe0697ad89e6236d256b875"
     },
     {
       "type": "skill",
-      "path": "skills/page-compose.skill.json",
+      "path": "skills/summarize.skill.yaml",
       "version": "1.0.0",
-      "sha256": "b685da77879d824f9d780cc9847ec8bd532525d93a57a8a714d71569ad81a449"
+      "sha256": "8aa0d682a2430056bc8b4022c547c08d474c0d76c0fabb1601b8e58690f93e74"
     },
     {
       "type": "skill",
-      "path": "skills/polish.skill.json",
+      "path": "skills/tone.skill.yaml",
       "version": "1.0.0",
-      "sha256": "655f84ee38ea74c14cb92a83860d773fdcb3c210df3369c3915d3ec843e0623c"
+      "sha256": "d51f113e797e18181613c8d38444983b2cf8c5550f411ca29c8f548ce70b0bbd"
     },
     {
       "type": "skill",
-      "path": "skills/rewrite.skill.json",
+      "path": "skills/translate.skill.yaml",
       "version": "1.0.0",
-      "sha256": "9668c48e90ce9617cbb359bcf0335e303a940e9e5482cdb6ed162cb02f791e2c"
-    },
-    {
-      "type": "skill",
-      "path": "skills/sentiment.skill.json",
-      "version": "1.0.0",
-      "sha256": "7ae72d1ebbfe102560509e44b4a528fa3c89c50ad557e9d5a586f245e17c9ecf"
-    },
-    {
-      "type": "skill",
-      "path": "skills/summarize.skill.json",
-      "version": "1.0.0",
-      "sha256": "776eeb7881c3c3cc7ed8bfa0d944c4f3f222bba247be9b87e3219a4654979678"
-    },
-    {
-      "type": "skill",
-      "path": "skills/tone.skill.json",
-      "version": "1.0.0",
-      "sha256": "2405a676b2121a2c5610fc08492b18e717c63cfd5c540be3b9ae0c4bca0aa328"
-    },
-    {
-      "type": "skill",
-      "path": "skills/translate.skill.json",
-      "version": "1.0.0",
-      "sha256": "2646e497863d1c90947c2220a9691f5b3633af177c7704905c57ade412c66b61"
+      "sha256": "d2c0d95fb7955fb409f4ba92df2b90866f60ee261f29990fa70543e433619304"
     },
     {
       "type": "slash",
-      "path": "slash/article.json",
+      "path": "slash/article.template.yaml",
       "version": "1.0.0",
-      "sha256": "c1a9f4887579637d12417914507a88730ad88575317ccca532f08b450bb87902"
+      "sha256": "d36e4b355f8aa75664acc5fa3cec7143d0eab6c47bd3a60d91c4607e20896af0"
     },
     {
       "type": "slash",
-      "path": "slash/brainstorm.json",
+      "path": "slash/brainstorm.template.yaml",
       "version": "1.0.0",
-      "sha256": "40155798845a148a21165a90aeddaa11c895447883c3d822e6ca9135854635a7"
+      "sha256": "6a760372690dabdbdfc2ab4935b68e94e79cb9f0d07306fb63d5245ad0e112c0"
     },
     {
       "type": "slash",
-      "path": "slash/class-notes.json",
+      "path": "slash/class-notes.template.yaml",
       "version": "1.0.0",
-      "sha256": "333441666a8dcd5b31201245efefc10b3a14cab68b9379532747ff7a85d580a2"
+      "sha256": "5e4dd77e85d9f8217923abfe4f837b3e4bd377666515d15e7284aa99698a0662"
     },
     {
       "type": "slash",
-      "path": "slash/competitor.json",
+      "path": "slash/competitor.template.yaml",
       "version": "1.0.0",
-      "sha256": "523837b563c296f46b88577575c176cc1fa83d0488779b7e1e9e689dc1494997"
+      "sha256": "fd3267e3d417cb085edb40a0739fed89ea511fa0ff374aaef804d0cf3855dc93"
     },
     {
       "type": "slash",
-      "path": "slash/daily-review.json",
+      "path": "slash/daily-review.template.yaml",
       "version": "1.0.0",
-      "sha256": "232e0d79893aaf011f229bfb013e179fe14dc9897e5a3fc191b924c561c33b26"
+      "sha256": "db6bdc6bf05dca45e1c51cae723e7250734997c8748c00a184073beff040bd98"
     },
     {
       "type": "slash",
-      "path": "slash/data.json",
+      "path": "slash/data.template.yaml",
       "version": "1.0.0",
-      "sha256": "2e2caf1a3568bbb9e8c947a2fae79f31779999f2de64f69b7a52ee9d7482b912"
+      "sha256": "0dd006ba02ef4300d91aa647e345b623927d53b16a38543a2b74adf62099435a"
     },
     {
       "type": "slash",
-      "path": "slash/experiment.json",
+      "path": "slash/experiment.template.yaml",
       "version": "1.0.0",
-      "sha256": "9df201a7549f166f7e51a61f3f556152c050abdaa0e3477618b304bec5bef15e"
+      "sha256": "b7a5e8300193c58a39c978aa707b735593498a96e76ef7e1a0b2646d9e35dce9"
     },
     {
       "type": "slash",
-      "path": "slash/idea.json",
+      "path": "slash/idea.template.yaml",
       "version": "1.0.0",
-      "sha256": "3911a151bacd4f1aa63b8c9871c6da78f8d9d1782b7bced14316237a0ca3c47b"
+      "sha256": "056a16103e0268b0ae93baa3baa5cc1b904383e4be67d887640d9c33d51af83a"
     },
     {
       "type": "slash",
-      "path": "slash/interview.json",
+      "path": "slash/interview.template.yaml",
       "version": "1.0.0",
-      "sha256": "d11608aeb779433eb3e719cdc5d69b0a5795e64458a8462308ccd3455ec3c9b6"
+      "sha256": "63fa3d0c726b8e329257e2011bd900fa70698cf95c137d5c4c449f325d0a9eaa"
     },
     {
       "type": "slash",
-      "path": "slash/literature.json",
+      "path": "slash/literature.template.yaml",
       "version": "1.0.0",
-      "sha256": "ae7eb1240bc77243c7f6d7e46ecc4091546b5d31aa65b888fbf82d27e1f941aa"
+      "sha256": "e1b1240239b13b83d565bcc3e351a448503f6d5ed4b9cc3fd4da7d7b5d00c6c3"
     },
     {
       "type": "slash",
-      "path": "slash/meeting.json",
+      "path": "slash/meeting.template.yaml",
       "version": "1.0.0",
-      "sha256": "a6a2b304461986b0e9570fc5ae31581a96418a6444f363e8ae3ce33d2a36ce8e"
+      "sha256": "f71203c53aa10d028ff6191d9335048ccc7f83c1067564172e646a7e808325ad"
     },
     {
       "type": "slash",
-      "path": "slash/plan.json",
+      "path": "slash/plan.template.yaml",
       "version": "1.0.0",
-      "sha256": "f81d124180d092ae5f4527edbb651282f55469e41b34d5ae8a1959705352c770"
+      "sha256": "53660f03170d2cddf5a7330e15c42f17303388611331e490d781c5be358437ac"
     },
     {
       "type": "slash",
-      "path": "slash/reading-notes.json",
+      "path": "slash/reading-notes.template.yaml",
       "version": "1.0.0",
-      "sha256": "50edf8c5f0b60a71995c88a375ffbafd43a6c1fcf00c93415e597dea90ac6d4a"
+      "sha256": "483ad9adc703d99847216eae908965a6853aad6d552fe3191f5e0a8726590690"
     },
     {
       "type": "slash",
-      "path": "slash/requirement.json",
+      "path": "slash/requirement.template.yaml",
       "version": "1.0.0",
-      "sha256": "4f55e3066b0b49b8c5ff657fcedce33ee37224dc9628323baaf4f6e6d9fc5540"
+      "sha256": "653ea33569855ee073b93805c5ff1ce57548ea9f1870a90f06d44e0ec8a83d8b"
     },
     {
       "type": "slash",
-      "path": "slash/review-outline.json",
+      "path": "slash/review-outline.template.yaml",
       "version": "1.0.0",
-      "sha256": "8771af5191dc975ab3abb3abadaa1e7f739d290061460f9efbf87aa84a3bd59e"
+      "sha256": "f85221d01140929ceb04734243df356f44a93a8449530c16cc5593cbff6699c7"
     },
     {
       "type": "slash",
-      "path": "slash/story.json",
+      "path": "slash/story.template.yaml",
       "version": "1.0.0",
-      "sha256": "de8db3c92fc4a3e715618760b0246f6ef0ab11efbb1ebcbfdd124f355f712076"
+      "sha256": "783fef1c2971b8463b9a785c66196ac9d4ff83cc0e6d40806ba4a1e41846ff3d"
     },
     {
       "type": "slash",
-      "path": "slash/tech-design.json",
+      "path": "slash/tech-design.template.yaml",
       "version": "1.0.0",
-      "sha256": "93d26c520dcfc10e1a1093378c24e2602f5ca92e975866534b069affe9d108b3"
+      "sha256": "eca4b87d14e2daed3515951bcfa03d69e14ab0828178e79a2c376bc32cc9b4f7"
     },
     {
       "type": "slash",
-      "path": "slash/todo.json",
+      "path": "slash/todo.template.yaml",
       "version": "1.0.0",
-      "sha256": "f63a777f1a1ee79785ae54ac676ad5315c7cf4b0944957e8c9580c0ee86b6e38"
+      "sha256": "f71cf670e4659abbc046611792401f1cdf4e31db4af43ec32da8aa1d334d7d9e"
     }
   ]
 }

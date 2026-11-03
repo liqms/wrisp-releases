@@ -1,0 +1,33 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: tech-design
+version: 1.0.0
+title:
+  zh: 技术方案
+  en: Technical Design
+description:
+  zh: 插入技术方案框架
+  en: Insert technical design skeleton
+icon: extension
+markdown:
+  zh: |
+    ## 技术方案 - {主题}
+    - 背景与目标：
+    - 方案对比：
+    - 选型理由：
+    - 架构图：
+    - 风险与回滚：
+  en: |
+    ## Technical Design - {topic}
+    - Background & goals:
+    - Options compared:
+    - Decision rationale:
+    - Architecture:
+    - Risks & rollback:
+profession:
+  - developer
+tags:
+  - zh: 技术
+    en: tech
+  - zh: 设计
+    en: design
+enabled: true

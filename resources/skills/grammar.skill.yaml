@@ -1,0 +1,70 @@
+# 语法修正：修正语法/标点/用词/句式，保持原风格。
+$schema: https://raw.githubusercontent.com/liqms/wrisp-releases/main/resources/schemas/skill.schema.json
+id: grammar
+name:
+  zh: 语法修正
+  en: Grammar Check
+description:
+  zh: 检查并修正文本中的语法、标点、用词和句式错误，确保文本规范正确
+  en: Detect and correct grammar, punctuation, word choice, and sentence structure errors to ensure the text is correct and well-formed
+icon: 📝
+version: 1.0.0
+author: Wrisp Team
+category: [editing, polish]
+tags:
+  - zh: 语法
+    en: grammar
+  - zh: 修正
+    en: correction
+  - zh: 校对
+    en: proofread
+  - zh: 拼写
+    en: spelling
+enabled: true
+# 输出契约：无错误时原样输出、有错误只给修正版（UI 依赖「纯结果」判定）；{{text}} 由执行器注入
+promptTemplate:
+  zh: |-
+    请检查并修正以下文本中的语法、标点、用词和句式错误：
+
+    {{text}}
+
+    要求：
+    1. 只输出修正后的结果，不要添加任何解释
+    2. 保持原文的风格和语气不变
+    3. 如果原文没有错误，请原样输出
+  en: |-
+    Please check and correct any grammar, punctuation, word choice, and sentence structure errors in the following text:
+
+    {{text}}
+
+    Requirements:
+    1. Output only the corrected result, without any explanation
+    2. Keep the original style and tone unchanged
+    3. If the original text has no errors, output it as is
+systemPrompt:
+  zh: 你是一个专业的文本校对助手，擅长发现和修正中文语法、标点、用词和句式错误。
+  en: You are a professional proofreading assistant skilled at detecting and correcting grammar, punctuation, word choice, and sentence structure errors.
+input:
+  type: object
+  properties:
+    text:
+      type: string
+      description:
+        zh: 需要修正语法的文本
+        en: The text to correct
+  required: [text]
+output:
+  type: text
+preProcess:
+  - type: trim
+example:
+  zh:
+    input:
+      text: 他很快的跑到了学校，但是已经迟到了。
+    output: 他很快地跑到了学校，但是已经迟到了。
+  en:
+    input:
+      text: He runned to the school very quick, but he was already late.
+    output: He ran to school very quickly, but he was already late.
+
+

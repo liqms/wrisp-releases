@@ -1,0 +1,91 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: page-project-plan
+version: 1.0.0
+title:
+  zh: 项目计划书
+  en: Project Plan
+description:
+  zh: 项目目标、里程碑与分工骨架
+  en: Project goals, milestones and staffing skeleton
+icon: task_alt
+markdown:
+  zh: |
+    # 项目计划书
+
+    ## 项目概述
+
+    - 项目名称：
+    - 项目目标：
+    - 关键成功指标：
+
+    ## 范围
+
+    - 包含：
+    - 不包含：
+
+    ## 里程碑计划
+
+    | 里程碑 | 交付物 | 截止日期 | 负责人 |
+    | --- | --- | --- | --- |
+    | M1 |  |  |  |
+
+    ## 资源与分工
+
+    | 成员 | 职责 |
+    | --- | --- |
+    |  |  |
+
+    ## 风险与应对
+
+    | 风险 | 影响 | 应对措施 |
+    | --- | --- | --- |
+    |  |  |  |
+
+    ## 沟通机制
+
+    - 周会：
+    - 文档：
+  en: |
+    # Project Plan
+
+    ## Overview
+
+    - Project name:
+    - Goals:
+    - Key success metrics:
+
+    ## Scope
+
+    - In scope:
+    - Out of scope:
+
+    ## Milestones
+
+    | Milestone | Deliverable | Due Date | Owner |
+    | --- | --- | --- | --- |
+    | M1 |  |  |  |
+
+    ## Team & Responsibilities
+
+    | Member | Responsibility |
+    | --- | --- |
+    |  |  |
+
+    ## Risks & Mitigation
+
+    | Risk | Impact | Mitigation |
+    | --- | --- | --- |
+    |  |  |  |
+
+    ## Communication
+
+    - Weekly meeting:
+    - Documentation:
+profession:
+  - pm
+tags:
+  - zh: 计划
+    en: plan
+  - zh: 项目
+    en: project
+enabled: true

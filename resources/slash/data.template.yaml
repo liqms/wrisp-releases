@@ -1,0 +1,27 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: data
+version: 1.0.0
+title:
+  zh: 产品数据
+  en: Product Data
+description:
+  zh: 插入产品数据框架
+  en: Insert product data skeleton
+icon: insights
+markdown:
+  zh: |
+    - 指标：{} 数值：{} 同比：
+    - 假设：
+    - 验证：
+  en: |
+    - Metric: {} Value: {} YoY:
+    - Hypothesis:
+    - Validation:
+profession:
+  - pm
+tags:
+  - zh: 数据
+    en: data
+  - zh: 指标
+    en: metric
+enabled: true

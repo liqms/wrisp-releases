@@ -113,10 +113,17 @@
     "tools": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/SkillToolDefinition"
+        "oneOf": [
+          { "$ref": "#/definitions/SkillToolDefinition" },
+          {
+            "type": "string",
+            "minLength": 1,
+            "description": "已注册工具名（字符串简写，运行时按 toolRegistry 解析，如 \"search_materials\"）"
+          }
+        ]
       },
       "maxItems": 16,
-      "description": "工具定义（L2 能力）"
+      "description": "工具定义（L2 能力；支持完整对象或已注册工具名的字符串简写）"
     },
     "maxSteps": {
       "type": "integer",
@@ -137,36 +144,6 @@
       },
       "maxItems": 8,
       "description": "预处理规则"
-    },
-    "workflow": {
-      "type": "object",
-      "required": ["nodeType", "inputs", "outputs"],
-      "properties": {
-        "nodeType": { "type": "string", "minLength": 1 },
-        "inputs": {
-          "type": "object",
-          "additionalProperties": { "type": "string" }
-        },
-        "outputs": {
-          "type": "object",
-          "additionalProperties": { "type": "string" }
-        }
-      },
-      "description": "Workflow 集成配置"
-    },
-    "parameters": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/SkillParameter"
-      },
-      "maxItems": 16
-    },
-    "inputMapping": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "string"
-      },
-      "description": "输入参数与上下文的映射关系，如 { \"text\": \"selectedText\" }"
     },
     "postProcess": {
       "$ref": "#/definitions/SkillPostProcess"
@@ -254,49 +231,6 @@
         }
       }
     },
-    "SkillParameter": {
-      "type": "object",
-      "required": ["name", "type", "default", "label", "description", "ui"],
-      "properties": {
-        "name": {
-          "type": "string",
-          "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$",
-          "minLength": 1,
-          "maxLength": 64
-        },
-        "type": {
-          "type": "string",
-          "enum": ["string", "number", "boolean"]
-        },
-        "enum": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "default": {
-          "oneOf": [
-            { "type": "string" },
-            { "type": "number" },
-            { "type": "boolean" }
-          ]
-        },
-        "label": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 128
-        },
-        "description": {
-          "type": "string",
-          "maxLength": 512
-        },
-        "ui": {
-          "type": "string",
-          "enum": ["dropdown", "input", "textarea", "toggle", "slider"]
-        }
-      }
-    },
     "SkillPostProcess": {
       "type": "object",
       "required": ["type"],
@@ -334,3 +268,6 @@
     }
   }
 }
+
+
+

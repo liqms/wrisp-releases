@@ -1,0 +1,27 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: todo
+version: 1.0.0
+title:
+  zh: 待办清单
+  en: Todo List
+description:
+  zh: 插入待办清单
+  en: Insert a todo list
+icon: check_circle
+markdown:
+  zh: |
+    ## 待办清单 - {标题}
+    - [ ] {任务1}
+    - [ ] {任务2}
+  en: |
+    ## Todo List - {title}
+    - [ ] {task 1}
+    - [ ] {task 2}
+profession:
+  - general
+tags:
+  - zh: 清单
+    en: list
+  - zh: 待办
+    en: todo
+enabled: true

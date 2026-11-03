@@ -1,0 +1,95 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: page-tech-design
+version: 1.0.0
+title:
+  zh: 技术设计文档
+  en: Technical Design Document
+description:
+  zh: 技术方案与接口设计骨架
+  en: Technical solution and API design skeleton
+icon: code
+markdown:
+  zh: |
+    # 技术设计文档
+
+    ## 背景与目标
+
+    - 需求：
+    - 目标：
+
+    ## 总体方案
+
+    - 方案概述：
+    - 备选方案对比：
+
+    ## 详细设计
+
+    ### 模块划分
+
+    ### 数据结构
+
+    ### 接口设计
+
+    | 接口 | 方法 | 入参 | 出参 | 说明 |
+    | --- | --- | --- | --- | --- |
+    |  |  |  |  |  |
+
+    ### 关键流程
+
+    ## 异常与兼容
+
+    - 异常处理：
+    - 兼容性：
+
+    ## 测试计划
+
+    - [ ] 单元测试：
+    - [ ] 集成测试：
+
+    ## 上线计划
+  en: |
+    # Technical Design Document
+
+    ## Background & Goals
+
+    - Requirement:
+    - Goals:
+
+    ## Overall Solution
+
+    - Summary:
+    - Alternatives:
+
+    ## Detailed Design
+
+    ### Modules
+
+    ### Data Structures
+
+    ### API Design
+
+    | API | Method | Input | Output | Notes |
+    | --- | --- | --- | --- | --- |
+    |  |  |  |  |  |
+
+    ### Key Flows
+
+    ## Errors & Compatibility
+
+    - Error handling:
+    - Compatibility:
+
+    ## Test Plan
+
+    - [ ] Unit tests:
+    - [ ] Integration tests:
+
+    ## Release Plan
+profession:
+  - developer
+tags:
+  - zh: 文档
+    en: document
+  - zh: 技术方案
+    en: tech-design
+enabled: true

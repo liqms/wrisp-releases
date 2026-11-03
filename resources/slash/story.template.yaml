@@ -1,0 +1,33 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: story
+version: 1.0.0
+title:
+  zh: 故事梗概
+  en: Story Outline
+description:
+  zh: 插入故事梗概框架
+  en: Insert story outline skeleton
+icon: auto_stories
+markdown:
+  zh: |
+    ## 故事梗概 - {标题}
+    - 人物：
+    - 设定：
+    - 冲突：
+    - 情节推进：
+    - 结局：
+  en: |
+    ## Story Outline - {title}
+    - Characters:
+    - Setting:
+    - Conflict:
+    - Plot progression:
+    - Ending:
+profession:
+  - writer
+tags:
+  - zh: 写作
+    en: writing
+  - zh: 故事
+    en: story
+enabled: true

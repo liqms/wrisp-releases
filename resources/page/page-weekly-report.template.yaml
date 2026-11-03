@@ -1,0 +1,67 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: page-weekly-report
+version: 1.0.0
+title:
+  zh: 项目周报
+  en: Weekly Report
+description:
+  zh: 周进展与风险汇报骨架
+  en: Weekly progress and risk report skeleton
+icon: summarize
+markdown:
+  zh: |
+    # 项目周报
+
+    - 周期：{起始日期} ~ {结束日期}
+    - 汇报人：
+
+    ## 本周进展
+
+    | 事项 | 状态 | 说明 |
+    | --- | --- | --- |
+    |  | 进行中 |  |
+
+    ## 数据与指标
+
+    ## 问题与风险
+
+    - 风险：
+    - 需要的支持：
+
+    ## 下周计划
+
+    - [ ] 
+
+    ## 备注
+  en: |
+    # Weekly Report
+
+    - Period: {start date} ~ {end date}
+    - Reporter:
+
+    ## Progress This Week
+
+    | Item | Status | Notes |
+    | --- | --- | --- |
+    |  | In progress |  |
+
+    ## Metrics
+
+    ## Issues & Risks
+
+    - Risks:
+    - Support needed:
+
+    ## Plan for Next Week
+
+    - [ ] 
+
+    ## Notes
+profession:
+  - general
+tags:
+  - zh: 报告
+    en: report
+  - zh: 周报
+    en: weekly
+enabled: true

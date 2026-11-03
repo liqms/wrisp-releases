@@ -1,0 +1,33 @@
+$schema: https://raw.githubusercontent.com/liqms/wrisp/main/resources/schemas/template.schema.json
+id: review-outline
+version: 1.0.0
+title:
+  zh: 复习提纲
+  en: Study Outline
+description:
+  zh: 插入复习提纲框架
+  en: Insert study outline skeleton
+icon: library_books
+markdown:
+  zh: |
+    ## 复习提纲 - {科目}
+    - 章节：
+    - 重点概念：
+    - 公式/定义：
+    - 易错点：
+    - 自测题：
+  en: |
+    ## Study Outline - {subject}
+    - Chapters:
+    - Key concepts:
+    - Formulas/definitions:
+    - Common mistakes:
+    - Practice questions:
+profession:
+  - student
+tags:
+  - zh: 学习
+    en: study
+  - zh: 复盘
+    en: review
+enabled: true
