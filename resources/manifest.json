@@ -1,12 +1,12 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-11-03T07:23:12.970Z",
+  "updatedAt": "2026-11-03T08:59:44.670Z",
   "files": [
     {
       "type": "model-meta",
-      "path": "model-meta/provider-models.json",
+      "path": "model-meta/provider-models.yaml",
       "version": "1.0.0",
-      "sha256": "86706ce9b8907bd2fb6aa87c4beb994e8c977fa6ffbc31267d132f838f44df1f"
+      "sha256": "eeeb01cacddc358d3752c643a79a1fd3f6a0a9fe692865726b5ebee39a2dd585"
     },
     {
       "type": "page",
